@@ -8,6 +8,12 @@
   <title>Add a Card</title>
 </head>
 <body>
-  add new card.
+  <h1>Add a new Card</h1>
+  <form action="/cards" method="POST" autocomplete="off">
+    Title: <input type="text" name="title"><br/>
+    Casting Cost: <input type="text" name="castCost"><br/>
+    Card Text: <input type="text" name="cardText"><br/>
+    <button type="submit">Add card to your collection!</button>
+  </form>
 </body>
 </html>
