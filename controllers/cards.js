@@ -8,7 +8,12 @@ function newCard(req, res){
   res.render('cards/new');
 }
 
+function create(req, res){
+  console.log(req.body);
+}
+
 export{
   index,
-  newCard as new
+  newCard as new,
+  create
 }

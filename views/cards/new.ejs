@@ -10,9 +10,9 @@
 <body>
   <h1>Add a new Card</h1>
   <form action="/cards" method="POST" autocomplete="off">
-    Title: <input type="text" name="title"><br/>
-    Casting Cost: <input type="text" name="castCost"><br/>
-    Card Text: <input type="text" name="cardText"><br/>
+    Title: <input type="text" name="title" required="true">
+    Casting Cost: <input type="text" name="castCost" required="true">
+    Card Text: <input type="text" name="cardText" required="true">
     <button type="submit">Add card to your collection!</button>
   </form>
 </body>
