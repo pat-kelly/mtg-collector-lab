@@ -8,7 +8,14 @@
   <title>Cards</title>
 </head>
 <body>
-  This is where cards go.
+  <h1>Current Collection:</h1>
+  <ul>
+    <% cards.forEach(card => { %>
+      <li>
+        <a href="/cards/<%= card._id %>"><%= card.title %> </a>
+      </li>
+    <% }) %>
+  </ul>
   <a href="cards/new">Add a card</a>
   <a href="/">Home</a>
 </body>
