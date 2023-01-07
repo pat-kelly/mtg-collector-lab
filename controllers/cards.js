@@ -43,9 +43,21 @@ function show(req, res){
   })
 }
 
+function delCard(req, res){
+  Card.findByIdAndDelete(req.params.id)
+  .then(card =>{
+    res.redirect('/cards');
+  })
+  .catch(err =>{
+    console.error(err);
+    res.redirect('/cards');
+  })  
+}
+
 export{
   index,
   newCard as new,
   create,
-  show
+  show,
+  delCard as delete
 }

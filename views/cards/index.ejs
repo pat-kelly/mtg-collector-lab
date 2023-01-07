@@ -12,6 +12,9 @@
   <ul>
     <% cards.forEach(card => { %>
       <li>
+        <form action="/cards/<%= card._id %>?_method=DELETE" class="delete-form" method="POST">
+          <button type="submit">X</button>
+        </form>
         <a href="/cards/<%= card._id %>"><%= card.title %> </a>
       </li>
     <% }) %>

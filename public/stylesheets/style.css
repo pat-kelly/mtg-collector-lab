@@ -4,6 +4,16 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.delete-form{
+  display:inline-block;
+  margin-right: 10px;
+}
+
+.delete-form button{
+  border-radius: 100%;
+  color: red;
+}
+
 a {
   color: #00B7FF;
 }
