@@ -51,7 +51,32 @@ function delCard(req, res){
   .catch(err =>{
     console.error(err);
     res.redirect('/cards');
+  })
+}
+
+function edit(req, res){
+  Card.findById(req.params.id)
+  .then(card =>{
+    res.render('cards/edit',{
+      card: card
+    })
+  })
+  .catch(err =>{
+    console.error(err);
+    res.redirect('/cards');
   })  
+}
+
+function update(req, res){
+  console.log(req.body);
+  Card.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  .then(card =>{
+    res.redirect(`/cards/${card._id}`);
+  })
+  .catch(err =>{
+    console.error(err);
+    res.redirect('/cards');
+  })
 }
 
 export{
@@ -59,5 +84,7 @@ export{
   newCard as new,
   create,
   show,
-  delCard as delete
+  delCard as delete,
+  edit,
+  update
 }

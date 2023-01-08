@@ -15,8 +15,14 @@ router.get('/new', cardsCtrl.new);
 // GET /cards/:id
 router.get('/:id', cardsCtrl.show);
 
+// GET /cards/:id/edit
+router.get('/:id/edit', cardsCtrl.edit);
+
 //DELETE cards/:id/
 router.delete('/:id', cardsCtrl.delete);
+
+//PUT cards/:id
+router.put('/:id', cardsCtrl.update);
 
 
 export {

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Edit <%= card.title %></title>
+</head>
+<body>
+  <h1>Edit <%= card.title %></h1>
+  <form action="/cards/<%= card._id %>?_method=PUT" method="POST" autocomplete="off">
+    <input value="<%= card.title %>" type="text" name="title">
+    <input value="<%= card.castCost %>" type="text" name="castCost">
+    <input value="<%= card.cardText %>" type="text" name="cardText">
+    <button type="submit">Update Card</button>
+  </form>
+</body>
+</html>
